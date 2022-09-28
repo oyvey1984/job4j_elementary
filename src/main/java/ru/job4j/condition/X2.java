@@ -5,7 +5,6 @@ public class X2 {
         return a * x * x + b * x + c;
     }
 
-
     public static void main(String[] args) {
         int a = 10;
         int b = 0;
