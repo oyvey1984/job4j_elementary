@@ -25,6 +25,5 @@ public class MathCalculator {
         System.out.println("Результат расчета суммы и умножения равен: " + sumAndMultiply(10, 20));
         System.out.println("Результат расчета вычитания и деления равен: " + subAndSegment(10, 20));
         System.out.println("Результат расчета суммы, умножениия, вычитания и деления равен: " + allSum(10, 20));
-
     }
 }
