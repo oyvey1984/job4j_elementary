@@ -7,14 +7,15 @@ public class JavaNameValidator {
 
     public static boolean isNameValid(String name) {
         boolean valid = false;
-        for (int i = 0; i < name.length(); i++) {
-            int code = name.codePointAt(i);
-            if (isSpecialSymbol(code) || isUpperLatinLetter(code) || isLowerLatinLetter(code)
-                    || isDigit(code)) {
-                valid = true;
-            }
-            if (isUpperCase(name.codePointAt(0)) || isDigit(name.codePointAt(0))) {
-                valid = false;
+        if (!name.isEmpty()) {
+            if (!isUpperCase(name.codePointAt(0)) && !isDigit(name.codePointAt(0))) {
+                for (int i = 1; i < name.length(); i++) {
+                    int code = name.codePointAt(i);
+                    if (isSpecialSymbol(code) || isUpperLatinLetter(code) || isLowerLatinLetter(code)
+                            || isDigit(code)) {
+                        valid = true;
+                    }
+                }
             }
         }
         return valid;
