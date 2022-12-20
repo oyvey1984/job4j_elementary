@@ -7,34 +7,25 @@ public class PointTest {
 
     @Test
     public void when00to20then2() {
+        Point c = new Point(0, 0);
+        Point d = new Point(2, 0);
         double expected = 2;
-        int x1 = 0;
-        int y1 = 0;
-        int x2 = 2;
-        int y2 = 0;
-        double out = Point.distance(x1, y1, x2, y2);
-        Assert.assertEquals(expected, out, 0.01);
+        Assert.assertEquals(expected, c.distance(d), 0.01);
     }
 
     @Test
     public void when25to58then4dot24() {
+        Point e = new Point(2, 5);
+        Point f = new Point(5, 8);
         double expected = 4.24;
-        int x1 = 2;
-        int y1 = 5;
-        int x2 = 5;
-        int y2 = 8;
-        double out = Point.distance(x1, y1, x2, y2);
-        Assert.assertEquals(expected, out, 0.01);
+        Assert.assertEquals(expected, e.distance(f), 0.01);
     }
 
     @Test
     public void whenMinus255to14Minus355then410dot31() {
+        Point g = new Point(-2, 55);
+        Point h = new Point(14, -355);
         double expected = 410.31;
-        int x1 = -2;
-        int y1 = 55;
-        int x2 = 14;
-        int y2 = -355;
-        double out = Point.distance(x1, y1, x2, y2);
-        Assert.assertEquals(expected, out, 0.01);
+        Assert.assertEquals(expected, g.distance(h), 0.01);
     }
 }
