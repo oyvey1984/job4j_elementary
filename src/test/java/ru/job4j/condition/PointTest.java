@@ -28,4 +28,20 @@ public class PointTest {
         double expected = 410.31;
         Assert.assertEquals(expected, g.distance(h), 0.01);
     }
+
+    @Test
+    public void whenMinus25533to993488then116dot90() {
+        Point k = new Point(-2, 55, 33);
+        Point l = new Point(99, 34, 88);
+        double expected = 116.90;
+        Assert.assertEquals(expected, k.distance3d(l), 0.01);
+    }
+
+    @Test
+    public void whenMinus255134to14Minus35568then415dot58() {
+        Point g = new Point(-2, 55, 134);
+        Point h = new Point(14, -355, 68);
+        double expected = 415.58;
+        Assert.assertEquals(expected, g.distance3d(h), 0.01);
+    }
 }
